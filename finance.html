@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    font-family:Arial;
+    margin:0;
+    background:#f4f6fb;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    margin-top:30px;
+}
+
+input,select{
+    padding:10px;
+    margin:10px;
+}
+
+button{
+    padding:10px 20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+}
+
+th,td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>💰 Finance Manager</h1>
+
+<p>Howard</p>
+
+</header>
+
+<div class="container">
+
+<h2>Add Record</h2>
+
+<input id="description" placeholder="Description">
+
+<select id="type">
+
+<option>Income</option>
+
+<option>Expense</option>
+
+</select>
+
+<input id="amount" type="number" placeholder="Amount">
+
+<button onclick="addRecord()">
+
+Add
+
+</button>
+
+<table id="table">
+
+<tr>
+
+<th>Description</th>
+
+<th>Type</th>
+
+<th>Amount</th>
+
+</tr>
+
+</table>
+
+</div>
+
+<script>
+
+function addRecord(){
+
+let d=document.getElementById("description").value;
+
+let t=document.getElementById("type").value;
+
+let a=document.getElementById("amount").value;
+
+if(d==""||a=="") return;
+
+document.getElementById("table").innerHTML+=`
+
+<tr>
+
+<td>${d}</td>
+
+<td>${t}</td>
+
+<td>RM ${a}</td>
+
+</tr>
+
+`;
+
+description.value="";
+
+amount.value="";
+
+}
+
+</script>
+
+</body>
+
+</html>
